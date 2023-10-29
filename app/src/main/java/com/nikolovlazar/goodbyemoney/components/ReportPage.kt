@@ -30,7 +30,7 @@ fun ReportPage(
   page: Int,
   recurrence: Recurrence,
   vm: ReportPageViewModel = viewModel(
-    key = "$page-${recurrence.name}",
+    key = "₹page-₹{recurrence.name}",
     factory = viewModelFactory {
       ReportPageViewModel(page, recurrence)
     })
@@ -51,14 +51,14 @@ fun ReportPage(
     ) {
       Column {
         Text(
-          "${
+          "₹{
             uiState.dateStart.formatDayForRange()
-          } - ${uiState.dateEnd.formatDayForRange()}",
+          } - ₹{uiState.dateEnd.formatDayForRange()}",
           style = Typography.titleSmall
         )
         Row(modifier = Modifier.padding(top = 4.dp)) {
           Text(
-            "USD",
+            "RS",
             style = Typography.bodyMedium,
             color = LabelSecondary,
             modifier = Modifier.padding(end = 4.dp)
@@ -70,7 +70,7 @@ fun ReportPage(
         Text("Avg/day", style = Typography.titleSmall)
         Row(modifier = Modifier.padding(top = 4.dp)) {
           Text(
-            "USD",
+            "RS",
             style = Typography.bodyMedium,
             color = LabelSecondary,
             modifier = Modifier.padding(end = 4.dp)
