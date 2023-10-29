@@ -44,7 +44,7 @@ fun ExpensesDayGroup(
     ) {
       Text("Total:", style = Typography.bodyMedium, color = LabelSecondary)
       Text(
-        DecimalFormat("USD 0.#").format(dayExpenses.total),
+        DecimalFormat("RS 0.#").format(dayExpenses.total),
         style = Typography.headlineMedium,
         color = LabelSecondary
       )
