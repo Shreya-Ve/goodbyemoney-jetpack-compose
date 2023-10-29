@@ -30,7 +30,7 @@ fun ReportPage(
   page: Int,
   recurrence: Recurrence,
   vm: ReportPageViewModel = viewModel(
-    key = "₹page-₹{recurrence.name}",
+    key = "$page-${recurrence.name}",
     factory = viewModelFactory {
       ReportPageViewModel(page, recurrence)
     })
