@@ -51,9 +51,9 @@ fun ReportPage(
     ) {
       Column {
         Text(
-          "₹{
+          "${
             uiState.dateStart.formatDayForRange()
-          } - ₹{uiState.dateEnd.formatDayForRange()}",
+          } - ${uiState.dateEnd.formatDayForRange()}",
           style = Typography.titleSmall
         )
         Row(modifier = Modifier.padding(top = 4.dp)) {
