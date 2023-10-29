@@ -30,7 +30,7 @@ fun MonthlyChart(expenses: List<Expense>, month: LocalDate) {
       bars = buildList() {
         for (i in 1..numberOfDays) {
           add(BarChartData.Bar(
-            label = "$i",
+            label = "₹i",
             value = groupedExpenses[i]?.total?.toFloat()
               ?: 0f,
             color = Color.White,
